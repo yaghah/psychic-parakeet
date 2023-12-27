@@ -24,14 +24,6 @@ commands:
 
             node-version: '18'
 
-        - node/install-packages:
-
-            pkg-manager: yarn
-
-            include-branch-in-cache-key: false
-
-            cache-version: v4
-
         - run:
 
             name: Run tests
